@@ -4,10 +4,11 @@ import java.util.Scanner;
 
 public class WiseSayingController {
     private final Scanner scanner;
-    private final WiseSayingService service = new WiseSayingService();
+    private final WiseSayingService service;
 
     public WiseSayingController(Scanner scanner) {
         this.scanner = scanner;
+        this.service = new WiseSayingService();
         sayHello();
     }
 

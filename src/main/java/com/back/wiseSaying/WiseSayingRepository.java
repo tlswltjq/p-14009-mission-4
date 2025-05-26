@@ -11,8 +11,8 @@ import java.util.stream.Stream;
 public class WiseSayingRepository {
     private String dbPath;
 
-    public WiseSayingRepository(String appRoot) {
-        dbPath = appRoot + "/db/wiseSaying";
+    public WiseSayingRepository() {
+        dbPath = WiseSayingApp.APP_ROOT + "/db/wiseSaying";
     }
 
     public WiseSaying save(WiseSaying wiseSaying) {

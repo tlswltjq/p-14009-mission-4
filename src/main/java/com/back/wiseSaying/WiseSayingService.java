@@ -1,9 +1,11 @@
 package com.back.wiseSaying;
 
 public class WiseSayingService {
-    private final String appRoot = "./src/main/resources";
-    private final WiseSayingRepository repository = new WiseSayingRepository(appRoot);
+    private final WiseSayingRepository repository;
 
+    public WiseSayingService() {
+        this.repository = new WiseSayingRepository();
+    }
 
     public WiseSaying registerWiseSaying(String wiseSayingContent, String author) {
         WiseSaying wiseSaying = createWiseSaying(wiseSayingContent, author);
