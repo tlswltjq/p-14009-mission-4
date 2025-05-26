@@ -1,12 +1,21 @@
 package com.back;
 
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import com.back.standard.util.TestUtil;
+import com.back.wiseSaying.WiseSayingApp;
 
-class AppTest {
-    @Test
-    public void 더하기() {
-        assertEquals(30, 30);
+import java.util.Scanner;
+
+public class AppTest {
+
+    public static String run(String input) {
+        Scanner scanner = TestUtil.genScanner(input.stripIndent().trim());
+        new WiseSayingApp(scanner).start();
+        String string = scanner.nextLine();
+
+        return string;
+    }
+
+    public static void clear() {
     }
 }

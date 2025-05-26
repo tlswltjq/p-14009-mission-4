@@ -3,8 +3,12 @@ package com.back.wiseSaying;
 import java.util.Scanner;
 
 public class WiseSayingApp {
-    private final Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
     private final WiseSayingController controller = new WiseSayingController(scanner);
+
+    public WiseSayingApp(Scanner scanner) {
+        this.scanner = scanner;
+    }
 
     public void start() {
         while (true) {
