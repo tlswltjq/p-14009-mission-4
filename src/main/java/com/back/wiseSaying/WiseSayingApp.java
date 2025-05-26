@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class WiseSayingApp {
     private Scanner scanner;
     private final WiseSayingController controller;
+    private boolean isRunning = true;
 
     public WiseSayingApp(Scanner scanner) {
         this.scanner = scanner;
@@ -12,10 +13,11 @@ public class WiseSayingApp {
     }
 
     public void start() {
-        while (true) {
+        while (isRunning) {
             String cmd;
+            System.out.print("명령) ");
             cmd = scanner.nextLine().trim();
-            controller.executeCommand(cmd);
+            isRunning = controller.executeCommand(cmd);
         }
     }
 }

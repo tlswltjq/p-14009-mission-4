@@ -31,8 +31,8 @@ public class WiseSayingService {
         repository.buildData();
     }
 
-    public void exit() {
-        System.exit(0);
+    public boolean exit() {
+        return false;
     }
 
     private WiseSaying createWiseSaying(String wiseSayingContent, String author) {

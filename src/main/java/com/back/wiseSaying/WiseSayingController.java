@@ -15,7 +15,7 @@ public class WiseSayingController {
         System.out.println("== 명언 앱 ==");
     }
 
-    public void executeCommand(String command) {
+    public boolean executeCommand(String command) {
         Integer id = null;
         String content;
         String author;
@@ -58,10 +58,10 @@ public class WiseSayingController {
                 service.buildWiseSaying();
                 break;
             case "종료":
-                service.exit();
-                break;
+                return service.exit();
 //            default:
 //                System.out.println("잘못된 명령어입니다.");
         }
+        return true;
     }
 }
