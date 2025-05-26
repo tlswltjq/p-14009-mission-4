@@ -9,7 +9,7 @@ public class WiseSayingService {
 
     public WiseSaying registerWiseSaying(String wiseSayingContent, String author) {
         WiseSaying wiseSaying = createWiseSaying(wiseSayingContent, author);
-        System.out.println(wiseSaying.getId() + "번명언이 등록되었습니다.");
+        System.out.println(wiseSaying.getId() + "번 명언이 등록되었습니다.");
         return wiseSaying;
     }
 
@@ -34,6 +34,7 @@ public class WiseSayingService {
     }
 
     public boolean exit() {
+        System.out.println("== 명언 앱을 종료합니다. ==");
         return false;
     }
 
